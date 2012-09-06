@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.title }} | Your payments{% endblock %}
+
+{% block extrahead %}
+<link href="{{ STATIC_URL }}css/stripe/themes/stripe.css" rel="stylesheet" type="text/css">
+<script id="tmpl-card" type="text/template">
+{% include "payments/card.tmpl" %}
+</script>
+{% endblock %}
+
+{% block ldmk_payments %}active{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h3>{{ object.title }}</h3>
+    {% if object.description.rendered %}
+    <div class="well">{{ object.description }}</div>
+    {% endif %}
+    <h4>Total: {{ object.currency }} {{ object.amount|floatformat:2 }}</h4>
+</div>
+
+{% if not object.settled %}
+<div class="row alert alert-block alert-error" id="errorPayment">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>Error!</h4>
+    There has been an error processing your payment.
+</div>
+<div class="row alert alert-block" id="invalidPayment">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>Warning!</h4>
+    The information you provided are not valid. Please check the highlighted fields.
+</div>
+<div class="row alert alert-block alert-success" id="successPayment">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>Success!</h4>
+    Your payment has been processed.
+</div>
+<div>
+    <form action="" method="post">{% csrf_token %}
+      <div class="row">
+        <payment key="{{ STRIPE_PUBLISHABLE_KEY }}"></payment>
+      </div>
+
+      <div class="row">
+        <input class="submit btn btn-primary" type="submit" value="Pay with Stripe">
+      </div>
+    </form>
+</div>
+{% else %}
+<h1 class="stamp stamp-success">Paid</h1>
+<p class="stamp stamp-paidon">{{ object.paid_on|date:"SHORT_DATE_FORMAT" }}</p>
+{% endif %}
+{% endblock %}
+
+{% block extrabody %}
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
+<script src="{{ STATIC_URL }}js/stripe/tag.dev.js"></script>
+<script>
+    $(document).ready(function() {
+        $('payment').bind('invalid.payment', function() {
+          $('#invalidPayment').slideDown();
+        });
+    });
+</script>
+{% endblock %}

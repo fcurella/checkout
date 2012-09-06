@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Create a Payment{% endblock %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block ldmk_new_payment %}active{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h1>Create a new payment</h1>
+</div>
+<div class="row">
+    <form role="form" method="POST" class="form-horizontal">
+        <fieldset>
+        {% csrf_token %}
+        <div class="control-group {% if form.errors.currency %}error{% endif %}">
+            <label class="control-label" for="currency">Currency</label>
+            <div class="controls">{{ form.currency }}{% if form.errors.currency %}<span class="help-inline">{{ form.errors.currency|join:", " }}</span>{% endif %}</div>
+        </div>
+
+        <div class="control-group {% if form.errors.amount %}error{% endif %}">
+            <label class="control-label" for="amount">Amount</label>
+            <div class="controls"><input class="form-control" type="number" min="2.00" name="amount" id="id_amount" placeholder="2.00">{% if form.errors.amount %}<span class="help-inline">{{ form.errors.amount|join:", " }}</span>{% endif %}</div>
+        </div>
+
+        <div class="control-group {% if form.errors.title %}error{% endif %}">
+            <label class="control-label" for="title">Title (optional)</label>
+            <div class="controls"><input class="form-control" type="text" name="title" id="id_title" placeholder="Title">{% if form.errors.title %}<span class="help-inline">{{ form.errors.title|join:", " }}</span>{% endif %}</div>
+        </div>
+
+        <div class="control-group {% if form.errors.description %}error{% endif %}">
+            <label class="control-label" for="Description">Description (optional)</label>
+            <div class="controls"><textarea class="form-control" name="description" id="id_description" rows="5" placeholder="Enter an optional description.."></textarea>{% if form.errors.description %}<span class="help-inline">{{ form.errors.description|join:", " }}</span>{% endif %}</div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        </fieldset>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block extrabody %}{% endblock %}

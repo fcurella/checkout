@@ -1,0 +1,56 @@
+#main {
+    padding-top: 61px;
+}
+#invalidPayment,
+#errorPayment,
+#successPayment
+{
+    display: none;
+}
+.stamp {
+    display: inline-block;
+    border: 0.2em solid;
+
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -o-border-radius: 16px;
+    -msie-border-radius: 16px;
+    border-radius: 16px;
+    padding: 0.25em 0.5em;
+    font-weight: bold;
+
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -msie-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+
+    text-transform: uppercase;
+}
+.stamp-small {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    -msie-border-radius: 8px;
+    border-radius: 8px;
+}
+.stamp-success {
+    border-color: rgb(70, 136, 71);
+    color: rgb(70, 136, 71);
+}
+.stamp-paidon {
+    margin-left: -36px;
+
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -msie-transform: rotate(4deg);
+    transform: rotate(4deg);
+
+    border: none;
+    border-bottom: 4px solid rgba(255, 0, 0, .6);
+    border-radius: 10px;
+
+    font-size: 2em;
+    color: rgba(255, 0, 0, .6);
+}
