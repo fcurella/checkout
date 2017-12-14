@@ -33,9 +33,9 @@
                   {% if user.is_authenticated %}
                   <li class="{% block ldmk_payments %}{% endblock %}"><a href="{% url 'payment_list' %}">Your payments</a></li>
                   <li class="{% block ldmk_new_payment %}{% endblock %}"><a href="{% url 'payment_create' %}">Create a new payment</a></li>
-                  <li class=""><a href="{% url 'accounts_logout' %}">Logout</a></li>
+                  <li class=""><a href="{% url 'logout' %}">Logout</a></li>
                   {% else %}
-                  <li class=""><a href="{% url 'accounts_login' %}">Login</a></li>
+                  <li class=""><a href="{% url 'login' %}">Login</a></li>
                   {% endif %}
                 </ul>
               </div>

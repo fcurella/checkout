@@ -17,8 +17,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^payments/(?P<pk>\d+)/$', views.PaymentDetail.as_view(), name='payment_detail'),
     url(r'^payments/create/$', views.PaymentCreate.as_view(), name='payment_create'),
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name="accounts_login"),
-    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', name="accounts_logout"),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+#    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name="accounts_login"),
+#    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', name="accounts_logout"),
 )
 
 urlpatterns += staticfiles_urlpatterns()

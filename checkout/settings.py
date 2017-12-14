@@ -154,6 +154,8 @@ LOGGING = {
 
 LOGIN_REDIRECT_URL = '/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # test
 STRIPE_API_KEY = os.environ['STRIPE_API_KEY']
 STRIPE_PUBLISHABLE_KEY = os.environ['STRIPE_PUBLISHABLE_KEY']
