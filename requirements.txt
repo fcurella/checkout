@@ -6,7 +6,6 @@ Markdown==2.6.6
 docutils==0.9
 pep8==0.6.1
 psycopg2==2.4.5
-pycrypto==2.6
 pyflakes==0.5.0
 pytz
 requests==2.5.0
