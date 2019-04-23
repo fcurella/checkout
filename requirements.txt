@@ -1,4 +1,4 @@
-Django>=1.9,<1.10
+Django>=1.10.7,<1.11
 dj-database-url==0.4.1
 django-dotenv==1.4.1
 django-markupfield==1.4.0
@@ -8,5 +8,5 @@ pep8==0.6.1
 psycopg2==2.4.5
 pyflakes==0.5.0
 pytz
-requests==2.5.0
+requests==2.20.0
 stripe==1.37.0
