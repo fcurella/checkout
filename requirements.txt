@@ -1,4 +1,4 @@
-Django>=1.10.7,<1.11
+Django>=1.11.19,<2.0
 dj-database-url==0.4.1
 django-dotenv==1.4.1
 django-markupfield==1.4.0
