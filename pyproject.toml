@@ -16,7 +16,7 @@ docutils = "0.9"
 psycopg2-binary = "^2.8.6"
 pyflakes = "^2.3.1"
 pytz = "^2021.1"
-requests = "2.20.0"
+requests = "2.25.1"
 stripe = "1.37.0"
 
 [tool.poetry.dev-dependencies]
