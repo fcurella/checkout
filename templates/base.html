@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,9 +13,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
-        <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.1.min.js"></script>
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <script src="{% static "js/vendor/modernizr-2.6.1.min.js" %}"></script>
         {% block extrahead %}{% endblock %}
     </head>
     <body>
@@ -60,12 +61,12 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery-1.8.0.min.js" %}"><\/script>')</script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
-        <script>window._ || document.write('<script src="{{ STATIC_URL }}js/vendor/underscore-min.js"><\/script>')</script>
-        <script src="{{ STATIC_URL }}js/plugins.js"></script>
-        <script src="{{ STATIC_URL }}js/main.js"></script>
-        <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+        <script>window._ || document.write('<script src="{% static "js/vendor/underscore-min.js" %}"><\/script>')</script>
+        <script src="{% static "js/plugins.js" %}"></script>
+        <script src="{% static "js/main.js" %}"></script>
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
         {% block extrabody %}{% endblock %}
     </body>
 </html>

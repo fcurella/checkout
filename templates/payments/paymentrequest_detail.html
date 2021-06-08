@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}{{ object.title }} | Your payments{% endblock %}
 
 {% block extrahead %}
-<link href="{{ STATIC_URL }}css/stripe/themes/stripe.css" rel="stylesheet" type="text/css">
+<link href="{% static "css/stripe/themes/stripe.css" %}" rel="stylesheet" type="text/css">
 <script id="tmpl-card" type="text/template">
 {% include "payments/card.tmpl" %}
 </script>
@@ -55,7 +56,7 @@
 
 {% block extrabody %}
 <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
-<script src="{{ STATIC_URL }}js/stripe/tag.dev.js"></script>
+<script src="{% static "js/stripe/tag.dev.js" %}"></script>
 <script>
     $(document).ready(function() {
         $('payment').bind('invalid.payment', function() {
