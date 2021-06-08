@@ -6,12 +6,12 @@ authors = ["fcurella <flavio.curella@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^2.7"
 Django = ">=1.11.19,<2.0"
 dj-database-url = "0.4.1"
 django-dotenv = "1.4.1"
 django-markupfield = "1.4.0"
-Markdown = "3.3.4"
+Markdown = "2.6.6"
 docutils = "0.9"
 psycopg2-binary = "^2.8.6"
 pyflakes = "^2.3.1"
