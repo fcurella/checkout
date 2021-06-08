@@ -16,7 +16,7 @@ python-versions = "*"
 
 [[package]]
 name = "dj-database-url"
-version = "0.4.1"
+version = "0.5.0"
 description = "Use Database URLs in your Django Application."
 category = "main"
 optional = false
@@ -145,7 +145,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^2.7"
-content-hash = "53030aab389273b9bdd73cb3d90a5ba0ef864ecd3c90cee975de96ed0469df49"
+content-hash = "1feb231da5d2543ff227c48114d9b83026f4818094729814c2ef8e4d31fd4680"
 
 [metadata.files]
 certifi = [
@@ -157,7 +157,8 @@ chardet = [
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
 dj-database-url = [
-    {file = "dj-database-url-0.4.1.tar.gz", hash = "sha256:7f4c78d2a090df8dfaf56d5d3ff7bbee17360436e4879558317e2314424864cd"},
+    {file = "dj-database-url-0.5.0.tar.gz", hash = "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163"},
+    {file = "dj_database_url-0.5.0-py2.py3-none-any.whl", hash = "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"},
 ]
 django = [
     {file = "Django-1.11.29-py2.py3-none-any.whl", hash = "sha256:014e3392058d94f40569206a24523ce254d55ad2f9f46c6550b0fe2e4f94cf3f"},
