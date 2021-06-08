@@ -1,11 +1,11 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from payments import views
 
-urlpatterns = patterns('',
+urlpatterns = [
     # Examples:
     # url(r'^$', 'checkout.views.home', name='home'),
     # url(r'^checkout/', include('checkout.foo.urls')),
@@ -20,6 +20,6 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('django.contrib.auth.urls')),
 #    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name="accounts_login"),
 #    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', name="accounts_logout"),
-)
+]
 
 urlpatterns += staticfiles_urlpatterns()
