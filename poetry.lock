@@ -39,7 +39,7 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-dotenv"
-version = "1.4.1"
+version = "1.4.2"
 description = "foreman reads from .env. manage.py doesn't. Let's fix that."
 category = "main"
 optional = false
@@ -145,7 +145,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^2.7"
-content-hash = "1feb231da5d2543ff227c48114d9b83026f4818094729814c2ef8e4d31fd4680"
+content-hash = "d9ee6f94f265ba80b687f26f32ff027cd17f87fd65a1f282ea5e60099c64ce8f"
 
 [metadata.files]
 certifi = [
@@ -165,8 +165,8 @@ django = [
     {file = "Django-1.11.29.tar.gz", hash = "sha256:4200aefb6678019a0acf0005cd14cfce3a5e6b9b90d06145fcdd2e474ad4329c"},
 ]
 django-dotenv = [
-    {file = "django-dotenv-1.4.1.tar.gz", hash = "sha256:f9e24f89a21f2b1ee010e903f9df5102b0c6c9174e629b07ca2f1a243bb68a3d"},
-    {file = "django_dotenv-1.4.1-py2.py3-none-any.whl", hash = "sha256:2930f6b0c0955ac150e1ca9ac01e84afa71efdbb544dea7155f026e20e401305"},
+    {file = "django-dotenv-1.4.2.tar.gz", hash = "sha256:3812bb0f4876cf31f902aad140f0645e120e51ee30eb7c40c22050f58a0e4adb"},
+    {file = "django_dotenv-1.4.2-py2.py3-none-any.whl", hash = "sha256:a9b1b40a70bd321acd231926acedb9bd2c5e873e33a1873b34a7276d196a765e"},
 ]
 django-markupfield = [
     {file = "django-markupfield-1.4.0.tar.gz", hash = "sha256:011352296637a739815d1bd5a9138a44532b7fc4b0d9ff801af2a41643c27c65"},
