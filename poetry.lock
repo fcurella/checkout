@@ -47,7 +47,7 @@ python-versions = "*"
 
 [[package]]
 name = "django-markupfield"
-version = "1.4.0"
+version = "2.0.0"
 description = "Custom Django field for easy use of markup in text fields"
 category = "main"
 optional = false
@@ -145,7 +145,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^2.7"
-content-hash = "d9ee6f94f265ba80b687f26f32ff027cd17f87fd65a1f282ea5e60099c64ce8f"
+content-hash = "97d21a3cae5c8cdc3760567826f128aaa89c3bae436d4b06f123470eb6fbe4f3"
 
 [metadata.files]
 certifi = [
@@ -169,8 +169,7 @@ django-dotenv = [
     {file = "django_dotenv-1.4.2-py2.py3-none-any.whl", hash = "sha256:a9b1b40a70bd321acd231926acedb9bd2c5e873e33a1873b34a7276d196a765e"},
 ]
 django-markupfield = [
-    {file = "django-markupfield-1.4.0.tar.gz", hash = "sha256:011352296637a739815d1bd5a9138a44532b7fc4b0d9ff801af2a41643c27c65"},
-    {file = "django_markupfield-1.4.0-py2.py3-none-any.whl", hash = "sha256:adb6d9e134f8083c473ffcd67da4ce93793395a7d3451aefa7f69af6110f3e21"},
+    {file = "django-markupfield-2.0.0.tar.gz", hash = "sha256:422a87eb847a821924f329758542b5ff466a3ddda7f6d31144cb152b3db298a0"},
 ]
 docutils = [
     {file = "docutils-0.9.tar.gz", hash = "sha256:ff49bf77e9135490a73740d884b418ab8b982ad16ee52cfe796d059c592ea245"},
